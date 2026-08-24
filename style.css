@@ -1,0 +1,467 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background: #f4f5f7;
+  color: #1a1a1a;
+  min-height: 100vh;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.screen {
+  max-width: 480px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  padding-top: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    padding-bottom: 0;
+    background: #145277;
+    background: linear-gradient(90deg, rgba(20, 82, 119, 1) 0%, rgba(131, 208, 203, 1) 100%);
+    border-radius: 0 0 20px 20px;
+}
+
+.entrenapp-logo {
+    height: 130px;
+    width: auto;
+    display: flex;
+    overflow: clip;
+    gap: 20px;
+    width: 100%;
+}
+.entrenapp-logo img {
+    height: 104%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    padding-top: 20px;
+}
+.entrenapp-logo h1 {    
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: normal;
+    color: white;
+    font-size: clamp(24px, 3vw, 32px);
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.navbar {
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    gap: 15px;
+    padding: 20px;
+    align-items: center;
+}
+
+#myInviteCode {
+    font-size: 0.85rem;
+    background: #fff;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    text-wrap: nowrap;
+    overflow: visible;
+    align-content: center;
+    padding: 12px;
+}
+
+#logoutBtn {
+    display: none;
+    width: auto;
+    background: none;
+    color: red;
+    font-size: 1.2rem;
+    line-height: 1;
+    padding: 12px;
+    margin-left: 0;
+}
+
+#main > div {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Onboarding */
+#onboarding {
+  text-align: center;
+  padding-top: 80px;
+}
+
+#onboarding p, #loginScreen p {
+  margin: 12px 0 20px;
+  color: #666;
+}
+
+.link-text {
+  color: #2563eb !important;
+  font-size: 0.9rem;
+  margin-top: 16px !important;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 4px;
+  margin-top: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:active {
+  opacity: 0.85;
+}
+
+.secondary-btn {
+    background: #fff;
+    color: #2563eb;
+    border: 1px solid #2563eb;
+    margin-bottom: 0;
+    font-size: 0.85rem;
+}
+
+/* Lista de amigos */
+.friend-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.friend-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.friend-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.beer-glass-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.beer-count {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.tentative-label {
+  font-size: 0.65rem;
+  color: #f59e0b;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.today-alert {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  color: #92400e;
+  font-size: 0.85rem;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tab-btn {
+  width: auto;
+  background: none;
+  color: #888;
+  font-weight: 600;
+  padding: 8px 4px;
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-btn.active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+}
+
+.tab-content.hidden {
+  display: none;
+}
+
+/* Calendario */
+#calendarLegend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  color: #444;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#calendarNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+#calendarNav button {
+  width: 36px;
+  padding: 6px;
+  background: #fff;
+  color: #2563eb;
+  border: 1px solid #ddd;
+}
+
+#calendarMonthLabel {
+  font-weight: 600;
+  min-width: 140px;
+  text-align: center;
+}
+
+#calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.calendar-weekday {
+  text-align: center;
+  font-size: 0.7rem;
+  color: #999;
+  font-weight: 600;
+  padding-bottom: 4px;
+}
+
+.calendar-day {
+  aspect-ratio: 1;
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  border: 1px solid #eee;
+}
+
+.calendar-day.empty {
+  background: transparent;
+  border: none;
+}
+
+.calendar-day.today {
+  border: 2px solid #2563eb;
+}
+
+.calendar-day-dots {
+  display: flex;
+  gap: 2px;
+  margin-top: 2px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 26px;
+}
+
+.calendar-day-dots .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.friend-name {
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.friend-score {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.beer-status {
+  font-size: 0.9rem;
+  padding: 8px 10px;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+.beer-status.owed-to-me {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.beer-status.i-owe {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.beer-status.even {
+  background: #f0fdf4;
+  color: #166534;
+}
+
+#emptyState {
+  text-align: center;
+  color: #888;
+  margin-top: 40px;
+}
+
+.settle-btn {
+  margin-top: 10px;
+  background: #10b981;
+}
+
+.settle-request-box {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+.settle-request-box.pending {
+  background: #f9fafb;
+  border-color: #e5e7eb;
+}
+
+.settle-request-box p {
+  color: #1a1a1a;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+.settle-request-box.pending p {
+  color: #888;
+}
+
+.settle-request-box .modal-actions {
+  margin-top: 10px;
+}
+
+/* Bot¨®n fijo (FAB) */
+.fab {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 440px;
+  width: calc(100% - 40px);
+  box-shadow: 0 4px 12px rgba(37,99,235,0.4);
+  z-index: 10;
+}
+
+/* Modales */
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  padding: 20px;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.modal-content h2 {
+  margin-bottom: 4px;
+}
+
+.modal-content p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 14px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.modal-actions button {
+  margin-bottom: 0;
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1a1a1a;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  z-index: 30;
+}
