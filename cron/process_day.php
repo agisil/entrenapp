@@ -2,11 +2,8 @@
 // Este script se ejecuta cada hora via cron de cPanel (el servidor está en UTC).
 // Fuerza la zona horaria de Europa y solo procesa si es la hora 00 en esa zona,
 // así no hay que recalcular el offset cada vez que cambia el horario de verano.
-//
-// Configurar en cPanel: Minuto: 5, Hora: * (todas), Día: *, Mes: *, Día de la semana: *
-// Línea de cron: 5 * * * * php /home/tu_usuario/public_html/entrenapp/cron/process_day.php
 
-date_default_timezone_set('Europe/Madrid'); // ajustá a tu zona real si no es esta
+date_default_timezone_set('Europe/Madrid');
 
 if ((int)date('H') !== 0) {
     echo "No es medianoche en Europe/Madrid todavía (son las " . date('H:i') . "), no se procesa." . PHP_EOL;
